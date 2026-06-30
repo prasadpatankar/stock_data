@@ -44,7 +44,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <div class="flex flex-col md:flex-row justify-between items-start md:items-center">
                 <div>
-                    <h1 class="text-xl font-bold tracking-tight text-white">Exchange Public Disclosure Portal</h1>
+                    <h1 class="text-xl font-bold tracking-tight text-white">Exchange Public Data Portal</h1>
                 </div>
                 <div class="mt-2 md:mt-0 text-left md:text-right">
                     <span id="subdomain-text" class="text-xs text-slate-400 font-mono font-medium">data.bse.in</span>
@@ -108,13 +108,7 @@
             <div class="flex flex-col gap-2">
                 <h3 class="text-[11px] font-bold text-slate-400 uppercase tracking-wider px-3">Investor Corner</h3>
 
-                <button onclick="setBucket('screener')" id="bucket-screener" class="flex items-center justify-between w-full text-left px-4 py-3 rounded-xl transition duration-150 text-slate-600 hover:bg-slate-100 font-medium">
-                    <div class="flex items-center space-x-3">
-                        <span class="icon-container text-slate-400"><i data-lucide="sliders-horizontal" class="w-5 h-5"></i></span>
-                        <span class="text-xs font-medium">Stock Screener</span>
-                    </div>
-                    <span class="bg-violet-100 text-violet-800 text-[9px] px-2 py-0.5 rounded-full font-bold uppercase">Filter</span>
-                </button>
+
 
                 <button onclick="setBucket('investor-ipo')" id="bucket-investor-ipo" class="flex items-center justify-between w-full text-left px-4 py-3 rounded-xl transition duration-150 text-slate-600 hover:bg-slate-100 font-medium">
                     <div class="flex items-center space-x-3">
@@ -136,8 +130,20 @@
                         <span class="text-xs font-medium">Returns Calculator</span>
                     </div>
                 </button>
+
+                <button onclick="setBucket('screener')" id="bucket-screener" class="flex items-center justify-between w-full text-left px-4 py-3 rounded-xl transition duration-150 text-slate-600 hover:bg-slate-100 font-medium">
+                    <div class="flex items-center space-x-3">
+                        <span class="icon-container text-slate-400"><i data-lucide="sliders-horizontal" class="w-5 h-5"></i></span>
+                        <span class="text-xs font-medium">Stock Screener</span>
+                    </div>
+                    <span class="bg-violet-100 text-violet-800 text-[9px] px-2 py-0.5 rounded-full font-bold uppercase">Filter</span>
+                </button>
+
+
             </div>
 
+
+            
             <!-- REGULATORY BULLETIN BUCKETS (sourced live from PRASAD_INDEX_FILE.xlsx on GitHub) -->
             <div class="flex flex-col gap-2">
                 <h3 class="text-[11px] font-bold text-slate-400 uppercase tracking-wider px-3">Historical Data</h3>
@@ -407,8 +413,9 @@
                     </h4>
                     
                     <!-- Sub-tabs are loaded dynamically inside this area -->
-                    <div id="subtab-container" class="flex flex-col gap-2">
-                        <!-- Loaded dynamically -->
+
+                    <div id="subtab-container" class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+
                     </div>
                 </div>
 
